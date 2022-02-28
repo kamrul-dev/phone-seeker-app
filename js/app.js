@@ -1,5 +1,4 @@
 // load the search api
-const detailsShow = document.getElementById('phone-details');
 const searchPhone = () => {
     const searchipInputField = document.getElementById('input-search-text');
     const searchText = searchipInputField.value;
@@ -41,6 +40,7 @@ const phoneDetails = (id) => {
         .then(phoneData => dispalyPhoneDetails(phoneData.data));
 }
 // display phone details
+const detailsShow = document.getElementById('phone-details');
 const dispalyPhoneDetails = (details) => {
     console.log(details)
     detailsShow.innerHTML = `
