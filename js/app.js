@@ -18,7 +18,10 @@ const displayPhone = (phones) => {
             <img src="${phone.image}" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">${phone.phone_name}</h5>
-                <span class="badge bg-success">${phone.brand}</span>
+                <div class= "d-flex justify-content-between align-items-center">
+                    <span class="badge bg-success justify-content-end">${phone.brand}</span>
+                    <button class="btn btn-success">See Details</button>
+                </div>
             </div>
         </div>
         `;
