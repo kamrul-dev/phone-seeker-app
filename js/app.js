@@ -1,17 +1,28 @@
 // load the search api
 const searchPhone = () => {
     const searchipInputField = document.getElementById('input-search-text');
+    const error = document.getElementById('error');
     const searchText = searchipInputField.value;
-    fetch(`https://openapi.programming-hero.com/api/phones?search=${searchText}`)
-        .then(res => res.json())
-        .then(phoneData => displayPhone(phoneData.data));
-    searchipInputField.value = '';
-    detailsShow.textContent = '';
+    if (!isNaN(searchText) || searchText === '') {
+        error.innerText = "*Please Enter a valid phone name(e.g: iphone)"
+        searchipInputField.value = '';
+        detailsShow.textContent = '';
+        displaySearchResult.textContent = '';
+
+    }
+    else {
+        fetch(`https://openapi.programming-hero.com/api/phones?search=${searchText}`)
+            .then(res => res.json())
+            .then(phoneData => displayPhone(phoneData.data));
+        searchipInputField.value = '';
+        detailsShow.textContent = '';
+        error.textContent = '';
+    }
 }
 
 // display search result on UI
+const displaySearchResult = document.getElementById('dispaly-phone');
 const displayPhone = (phones) => {
-    const displaySearchResult = document.getElementById('dispaly-phone');
     displaySearchResult.textContent = '';
     phones.forEach(phone => {
         // console.log(phone)
@@ -43,6 +54,7 @@ const phoneDetails = (id) => {
 const detailsShow = document.getElementById('phone-details');
 const dispalyPhoneDetails = (details) => {
     console.log(details)
+    error.textContent = '';
     detailsShow.innerHTML = `
     <div class="col">
         <div class="p-3 text-center">
