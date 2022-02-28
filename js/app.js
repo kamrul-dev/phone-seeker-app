@@ -5,6 +5,7 @@ const searchPhone = () => {
     fetch(`https://openapi.programming-hero.com/api/phones?search=${searchText}`)
         .then(res => res.json())
         .then(phoneData => displayPhone(phoneData.data));
+    searchipInputField.value = '';
 }
 
 // display search result on UI
