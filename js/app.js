@@ -10,8 +10,9 @@ const searchPhone = () => {
 
 // display search result on UI
 const displayPhone = (phones) => {
+    const displaySearchResult = document.getElementById('dispaly-phone');
+    displaySearchResult.innerHTML = '';
     phones.forEach(phone => {
-        const displaySearchResult = document.getElementById('dispaly-phone');
         const div = document.createElement('div');
         div.classList.add("col");
         div.innerHTML = `
