@@ -1,4 +1,5 @@
 // load the search api
+const detailsShow = document.getElementById('phone-details');
 const searchPhone = () => {
     const searchipInputField = document.getElementById('input-search-text');
     const searchText = searchipInputField.value;
@@ -6,12 +7,13 @@ const searchPhone = () => {
         .then(res => res.json())
         .then(phoneData => displayPhone(phoneData.data));
     searchipInputField.value = '';
+    detailsShow.textContent = '';
 }
 
 // display search result on UI
 const displayPhone = (phones) => {
     const displaySearchResult = document.getElementById('dispaly-phone');
-    displaySearchResult.innerHTML = '';
+    displaySearchResult.textContent = '';
     phones.forEach(phone => {
         // console.log(phone)
         const div = document.createElement('div');
@@ -41,7 +43,7 @@ const phoneDetails = (id) => {
 // display phone details
 const dispalyPhoneDetails = (details) => {
     console.log(details)
-    document.getElementById('phone-details').innerHTML = `
+    detailsShow.innerHTML = `
     <div class="col">
         <div class="p-3 text-center">
             <img class="w-50" src="${details.image}" alt="">
@@ -50,7 +52,7 @@ const dispalyPhoneDetails = (details) => {
     <div class="col">
         <div>
             <h1>${details.name}</h1>
-                <h5>Release Date: ${details.releaseDate}</h5>
+                <h5>${details.releaseDate}</h5>
             <h5>Main Featrues</h5>
             <ul>
                 <li><span class="fw-bold">chipSet:</span> ${details.mainFeatures.chipSet}</li>
@@ -60,5 +62,5 @@ const dispalyPhoneDetails = (details) => {
         </div>
     </div>
     `;
-
 }
+
