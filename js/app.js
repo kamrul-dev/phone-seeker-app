@@ -38,4 +38,7 @@ const phoneDetails = (id) => {
         .then(res => res.json())
         .then(phoneData => dispalyPhoneDetails(phoneData.data));
 }
-
+// display phone details
+const dispalyPhoneDetails = (details) =>{
+    console.log(details)
+}
