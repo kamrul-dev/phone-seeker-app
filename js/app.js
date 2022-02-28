@@ -9,5 +9,7 @@ const searchPhone = () => {
 
 // display search result on UI
 const displayPhone = (phones) => {
-    console.log(phones);
+    phones.forEach(phone => {
+        console.log(phone)
+    })
 }
