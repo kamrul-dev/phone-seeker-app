@@ -4,5 +4,10 @@ const searchPhone = () => {
     const searchText = searchipInputField.value;
     fetch(`https://openapi.programming-hero.com/api/phones?search=${searchText}`)
         .then(res => res.json())
-        .then(phoneData => console.log(phoneData.data));
+        .then(phoneData => displayPhone(phoneData.data));
+}
+
+// display search result on UI
+const displayPhone = (phones) => {
+    console.log(phones);
 }
