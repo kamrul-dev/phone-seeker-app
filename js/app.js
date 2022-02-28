@@ -39,6 +39,26 @@ const phoneDetails = (id) => {
         .then(phoneData => dispalyPhoneDetails(phoneData.data));
 }
 // display phone details
-const dispalyPhoneDetails = (details) =>{
+const dispalyPhoneDetails = (details) => {
     console.log(details)
+    document.getElementById('phone-details').innerHTML = `
+    <div class="col">
+        <div class="p-3 text-center">
+            <img class="w-50" src="${details.image}" alt="">
+        </div>
+    </div>
+    <div class="col">
+        <div>
+            <h1>${details.name}</h1>
+                <h5>Release Date: ${details.releaseDate}</h5>
+            <h5>Main Featrues</h5>
+            <ul>
+                <li><span class="fw-bold">chipSet:</span> ${details.mainFeatures.chipSet}</li>
+                <li><span class="fw-bold">displaySize:</span> ${details.mainFeatures.displaySize}</li>
+                <li><span class="fw-bold">memory:</span> ${details.mainFeatures.memory}</li>
+            </ul>
+        </div>
+    </div>
+    `;
+
 }
