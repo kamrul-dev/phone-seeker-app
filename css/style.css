@@ -17,6 +17,12 @@
 }
 
 /* style for phone details  */
-#phone-details{
+.phone-details{
     border-radius: 10px;
 }
+/* style for other details section */
+#other-details{
+    border-radius: 10px; 
+    padding: 10px;
+}
+

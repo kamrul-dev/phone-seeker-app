@@ -8,6 +8,7 @@ const searchPhone = () => {
         searchipInputField.value = '';
         detailsShow.textContent = '';
         displaySearchResult.textContent = '';
+        otherDetails.textContent = '';
 
     }
     else {
@@ -16,6 +17,7 @@ const searchPhone = () => {
             .then(phoneData => displayPhone(phoneData.data));
         searchipInputField.value = '';
         detailsShow.textContent = '';
+        otherDetails.textContent = '';
         error.textContent = '';
     }
 }
@@ -53,6 +55,7 @@ const phoneDetails = (id) => {
 }
 // display phone details
 const detailsShow = document.getElementById('phone-details');
+const otherDetails = document.getElementById('other-details')
 const dispalyPhoneDetails = (details) => {
     console.log(details)
     error.textContent = '';
@@ -71,6 +74,7 @@ const dispalyPhoneDetails = (details) => {
                 <li><span class="fw-bold">chipSet:</span> ${details.mainFeatures.chipSet}</li>
                 <li><span class="fw-bold">displaySize:</span> ${details.mainFeatures.displaySize}</li>
                 <li><span class="fw-bold">memory:</span> ${details.mainFeatures.memory}</li>
+                <li><span class="fw-bold">storage:</span> ${details.mainFeatures.storage}</li>
             </ul>
             <h5>Sensors-</h5>
             <ul class="overflow-hidden">
@@ -78,6 +82,19 @@ const dispalyPhoneDetails = (details) => {
             </ul>
         </div>
     </div>
+    `;
+    otherDetails.innerHTML = `
+        <div class="col">
+            <h1>Other details</h1>
+            <ul>
+                <li>Bluetooth : </li>
+                <li>GPS : </li>
+                <li>NFC : </li>
+                <li>Radio : </li>
+                <li>USB : </li>
+                <li>Wlan : </li>
+            </ul>
+        </div>
     `;
 }
 

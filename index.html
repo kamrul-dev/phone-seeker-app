@@ -26,22 +26,30 @@
             <button onclick="searchPhone()" class="btn btn-outline-success" type="submit">Search</button>
         </div>
         <!-- Show error message -->
-        <div class="text-center text-danger"><h5 id="error"></h5></div>
+        <div class="text-center text-danger">
+            <h5 id="error"></h5>
+        </div>
     </header>
     <!-- End search section  -->
 
     <main class="container mt-5">
-        <!-- start phone details section -->
-        <div id="phone-details" class="row row-cols-1 row-cols-md-2 row-cols-lg-2 shadow-lg g-4 mb-3">
+        <section>
+            <!-- start phone details section -->
+            <div id="phone-details" class="row phone-details row-cols-1 row-cols-md-2 row-cols-lg-2 shadow-lg g-4 mb-3">
 
-        </div>
-        <!-- End phone details section -->
+            </div>
+            <!--  others details  -->
+            <div id="other-details" class="row shadow-lg mb-3">
 
-        <!-- start phone display for search result -->
-        <div id="dispaly-phone" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            </div>
+            <!-- End phone details section -->
 
-        </div>
-        <!-- End phone display for search result -->
+            <!-- start phone display for search result -->
+            <div id="dispaly-phone" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+            </div>
+            <!-- End phone display for search result -->
+        </section>
     </main>
     <script src="js/app.js"></script>
 </body>
