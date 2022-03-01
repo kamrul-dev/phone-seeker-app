@@ -23,8 +23,9 @@ const searchPhone = () => {
 // display search result on UI
 const displaySearchResult = document.getElementById('dispaly-phone');
 const displayPhone = (phones) => {
+    const phones20Result = phones.slice(0, 20);
     displaySearchResult.textContent = '';
-    phones.forEach(phone => {
+    phones20Result.forEach(phone => {
         // console.log(phone)
         const div = document.createElement('div');
         div.classList.add("col");
