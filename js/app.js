@@ -90,7 +90,7 @@ const dispalyPhoneDetails = (details) => {
     //display other details on UI
     otherDetails.innerHTML = `
         <div class="col">
-            <h3>Other details</h3>
+            <h3>Other Featrues</h3>
             <ul>
                 <li><span class="fw-bold">Bluetooth :</span> ${details.others.Bluetooth}: </li>
                 <li><span class="fw-bold">GPS :</span> ${details.others.GPS}</li>
