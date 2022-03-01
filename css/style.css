@@ -1,3 +1,7 @@
+/* primary color */
+.primary-color{
+    color: rgb(109, 206, 109)
+}
 /* style for phone card */
 .phone-container{
     padding: 30px;
@@ -11,6 +15,12 @@
 }
 
 /* hover effect for details button on card */
+.details-btn{
+
+    border: 1px solid rgb(109, 206, 109);
+    border-radius: 5px;
+    padding: 5px;
+}
 .details-btn:hover{
     box-shadow: rgba(164, 245, 132, 0.4) 0px 0px 0px 2px, rgba(110, 236, 137, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
     transition: 0.5s;

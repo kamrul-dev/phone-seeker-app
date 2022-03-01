@@ -40,7 +40,8 @@ const displayPhone = (phones) => {
                 <h5 class="card-title">${phone.phone_name}</h5>
                 <div class= "d-flex justify-content-between align-items-center">
                     <span class="badge bg-success justify-content-end">${phone.brand}</span>
-                    <button onclick="phoneDetails('${phone.slug}')" class="btn btn-success details-btn">See Details</button>
+                    <button onclick="phoneDetails('${phone.slug}')" class="details-btn"
+                    >See Details > </button>
                 </div>
             </div>
         </div>
