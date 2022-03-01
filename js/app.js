@@ -86,16 +86,17 @@ const dispalyPhoneDetails = (details) => {
     </div>
     `;
     document.getElementById('other-details').style.display = 'block';
+    //display other details on UI
     otherDetails.innerHTML = `
         <div class="col">
             <h1>Other details</h1>
             <ul>
-                <li>Bluetooth : </li>
-                <li>GPS : </li>
-                <li>NFC : </li>
-                <li>Radio : </li>
-                <li>USB : </li>
-                <li>Wlan : </li>
+                <li><span class="fw-bold">Bluetooth :</span> ${details.others.Bluetooth}: </li>
+                <li><span class="fw-bold">GPS :</span> ${details.others.GPS}</li>
+                <li><span class="fw-bold">NFC :</span> ${details.others.NFC}</li>
+                <li><span class="fw-bold">Radio :</span> ${details.others.Radio}</li>
+                <li><span class="fw-bold">USB :</span> ${details.others.USB}</li>
+                <li><span class="fw-bold">WLAN :</span> ${details.others.WLAN}</li>
             </ul>
         </div>
     `;
