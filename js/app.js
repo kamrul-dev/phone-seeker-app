@@ -37,7 +37,7 @@ const displayPhone = (phones) => {
         <div class="phone-container h-100">
             <img src="${phone.image}" class="card-img-top" alt="...">
             <div class="card-body">
-                <h5 class="card-title">${phone.phone_name}</h5>
+                <h5 class="card-title primary-color">${phone.phone_name}</h5>
                 <div class= "d-flex justify-content-between align-items-center">
                     <span class="badge bg-success justify-content-end">${phone.brand}</span>
                     <button onclick="phoneDetails('${phone.slug}')" class="details-btn"
