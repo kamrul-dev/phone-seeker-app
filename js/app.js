@@ -34,7 +34,7 @@ const displayPhone = (phones) => {
         const div = document.createElement('div');
         div.classList.add("col");
         div.innerHTML = `
-        <div class="phone-container h-100">
+        <div class="phone-container w-75 h-100 mx-auto">
             <img src="${phone.image}" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">${phone.phone_name}</h5>
