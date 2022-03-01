@@ -9,6 +9,7 @@ const searchPhone = () => {
         detailsShow.textContent = '';
         displaySearchResult.textContent = '';
         otherDetails.textContent = '';
+        document.getElementById('other-details').style.display = 'none';
 
     }
     else {
@@ -19,6 +20,7 @@ const searchPhone = () => {
         detailsShow.textContent = '';
         otherDetails.textContent = '';
         error.textContent = '';
+        document.getElementById('other-details').style.display = 'none';
     }
 }
 
@@ -83,6 +85,7 @@ const dispalyPhoneDetails = (details) => {
         </div>
     </div>
     `;
+    document.getElementById('other-details').style.display = 'block';
     otherDetails.innerHTML = `
         <div class="col">
             <h1>Other details</h1>
