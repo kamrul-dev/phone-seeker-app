@@ -64,7 +64,7 @@ const dispalyPhoneDetails = (details) => {
     <div class="col">
         <div>
             <h1>${details.name}</h1>
-                <h5>${details.releaseDate}</h5>
+                <h5>${details.releaseDate?details.releaseDate:'<span class="text-danger">Release Date Not Found!</span>'}</h5>
             <h5>Main Featrues</h5>
             <ul>
                 <li><span class="fw-bold">chipSet:</span> ${details.mainFeatures.chipSet}</li>
