@@ -60,7 +60,7 @@ const phoneDetails = (id) => {
 const detailsShow = document.getElementById('phone-details');
 const otherDetails = document.getElementById('other-details')
 const dispalyPhoneDetails = (details) => {
-    console.log(details)
+    // console.log(details)
     error.textContent = '';
     otherDetails.textContent = '';
     detailsShow.innerHTML = `
