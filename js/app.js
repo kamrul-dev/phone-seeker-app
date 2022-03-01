@@ -93,7 +93,7 @@ const dispalyPhoneDetails = (details) => {
         <div class="col">
             <h3>Other Featrues</h3>
             <ul>
-                <li><span class="fw-bold">Bluetooth :</span> ${details.others.Bluetooth ? details.others.Bluetooth:'Not found'}: </li>
+                <li><span class="fw-bold">Bluetooth :</span> ${details.others.Bluetooth} </li>
                 <li><span class="fw-bold">GPS :</span> ${details.others.GPS}</li>
                 <li><span class="fw-bold">NFC :</span> ${details.others.NFC}</li>
                 <li><span class="fw-bold">Radio :</span> ${details.others.Radio}</li>
