@@ -73,7 +73,7 @@ const dispalyPhoneDetails = (details) => {
         <div>
             <h3>${details.name}</h3>
                 <h5>${details.releaseDate ? details.releaseDate : '<span class="text-danger">Release Date Not Found!</span>'}</h5>
-            <h5>Main Featrues-</h5>
+            <h5>Main Features-</h5>
             <ul>
                 <li><span class="fw-bold">chipSet:</span> ${details.mainFeatures.chipSet}</li>
                 <li><span class="fw-bold">displaySize:</span> ${details.mainFeatures.displaySize}</li>
@@ -91,7 +91,7 @@ const dispalyPhoneDetails = (details) => {
     //display other details on UI
     otherDetails.innerHTML = `
         <div class="col">
-            <h3>Other Featrues</h3>
+            <h3>Other Features</h3>
             <ul>
                 <li><span class="fw-bold">Bluetooth :</span> ${details.others.Bluetooth} </li>
                 <li><span class="fw-bold">GPS :</span> ${details.others.GPS}</li>
