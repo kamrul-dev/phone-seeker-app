@@ -65,12 +65,12 @@ const dispalyPhoneDetails = (details) => {
     otherDetails.textContent = '';
     detailsShow.innerHTML = `
     <div class="col">
-        <div class="p-3 text-center">
+        <div class="text-center mb-3">
             <img class="w-50" src="${details.image}" alt="">
         </div>
     </div>
     <div class="col">
-        <div>
+        <div class = "bg bg-light mb-3 p-3 phone-details">
             <h3>${details.name}</h3>
                 <h5>${details.releaseDate ? details.releaseDate : '<span class="text-danger">Release Date Not Found!</span>'}</h5>
             <h5>Main Features-</h5>
