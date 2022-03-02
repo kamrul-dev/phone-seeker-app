@@ -68,6 +68,7 @@ const detailsShow = document.getElementById('phone-details');
 const otherDetails = document.getElementById('other-details')
 const dispalyPhoneDetails = (details) => {
     // console.log(details)
+    window.scroll(0, 1);
     error.textContent = '';
     otherDetails.textContent = '';
     detailsShow.innerHTML = `
