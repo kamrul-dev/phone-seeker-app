@@ -32,6 +32,12 @@ const spinnerLoading = (spin) => {
 // display search result on UI
 const displaySearchResult = document.getElementById('dispaly-phone');
 const displayPhone = (phones) => {
+    if(phones.length === 0){
+        error.innerText = "*Result not found!"
+        displaySearchResult.textContent = '';
+        spinnerLoading('none');
+    }
+  else{
     const phones20Result = phones.slice(0, 20);
     displaySearchResult.textContent = '';
     phones20Result.forEach(phone => {
@@ -54,6 +60,7 @@ const displayPhone = (phones) => {
         displaySearchResult.appendChild(div);
         spinnerLoading('none');
     })
+  }
 }
 
 // phone details
