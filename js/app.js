@@ -1,10 +1,12 @@
 // load the search api
 const searchPhone = () => {
     const searchipInputField = document.getElementById('input-search-text');
+    spinnerLoading('block');
     const error = document.getElementById('error');
     const searchText = searchipInputField.value;
     if (!isNaN(searchText) || searchText === '') {
         error.innerText = "*Please Enter a valid phone name(e.g: iphone)"
+        spinnerLoading('none');
         searchipInputField.value = '';
         detailsShow.textContent = '';
         displaySearchResult.textContent = '';
@@ -23,7 +25,10 @@ const searchPhone = () => {
         document.getElementById('other-details').style.display = 'none';
     }
 }
-
+//spinner loading function
+const spinnerLoading = (spin) => {
+    document.getElementById('spinner').style.display = spin;
+}
 // display search result on UI
 const displaySearchResult = document.getElementById('dispaly-phone');
 const displayPhone = (phones) => {
@@ -47,6 +52,7 @@ const displayPhone = (phones) => {
         </div>
         `;
         displaySearchResult.appendChild(div);
+        spinnerLoading('none');
     })
 }
 
@@ -55,6 +61,7 @@ const phoneDetails = (id) => {
     fetch(`https://openapi.programming-hero.com/api/phone/${id}`)
         .then(res => res.json())
         .then(phoneData => dispalyPhoneDetails(phoneData.data));
+    spinnerLoading('block');
 }
 // display phone details
 const detailsShow = document.getElementById('phone-details');
@@ -87,7 +94,9 @@ const dispalyPhoneDetails = (details) => {
         </div>
     </div>
     `;
+    spinnerLoading('none');
     document.getElementById('other-details').style.display = 'block';
+
     //display other details on UI
     otherDetails.innerHTML = `
         <div class="col">
